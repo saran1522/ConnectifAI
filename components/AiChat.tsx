@@ -8,14 +8,19 @@ import {
 } from "@/components/ui/sheet";
 import { ArrowRight, BotIcon, Sparkle, User } from "lucide-react";
 import { runConversation } from "@/actions/gemini.action";
+import { Content } from "@google/generative-ai";
 
 function AiChat() {
   const [query, setQuery] = useState("");
-  const [conversationHistory, setConversationHistory] = useState([]);
+  const [conversationHistory, setConversationHistory] = useState<Content[]>([]);
   async function handleQuery() {
-    const res = await runConversation(query);
-    setConversationHistory(res);
-    setQuery("");
+    try {
+      const res = await runConversation(query);
+      setConversationHistory(res);
+      setQuery("");
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <Sheet>
@@ -39,14 +44,14 @@ function AiChat() {
                 className={`flex font-normal gap-2 tracking-wide text-gray-300 items-start mr-1 my-2 w-fit`}
               >
                 <span className="text-gray-300 p-0.5 mt-1 border rounded-full border-gray-300">
-                  {convo.role === "user" ? (
+                  {convo?.role === "user" ? (
                     <User size={16} />
                   ) : (
                     <BotIcon size={16} />
                   )}
                 </span>
                 <Markdown className="leading-6 text-sm">
-                  {convo.parts[0].text}
+                  {`${convo.parts[0].text}`}
                 </Markdown>
               </div>
             ))}

@@ -48,11 +48,11 @@ function MeetingCard({
             <Button
               className="bg-dark-2"
               onClick={() => {
-                navigator.clipboard.writeText(link);
+                navigator.clipboard.writeText(link!);
                 toast({ title: "Link Copied" });
               }}
             >
-              <Image height={20} width={20} src={buttonIcon} alt="icon" />
+              <Image height={20} width={20} src={buttonIcon!} alt="icon" />
               &nbsp; {buttonText2}
             </Button>
             {code && (
@@ -63,7 +63,7 @@ function MeetingCard({
                   toast({ title: "Code Copied" });
                 }}
               >
-                <Image height={20} width={20} src={buttonIcon} alt="icon" />
+                <Image height={20} width={20} src={buttonIcon!} alt="icon" />
                 &nbsp; Copy Code
               </Button>
             )}
