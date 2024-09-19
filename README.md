@@ -5,20 +5,20 @@ ConnectifAI is an AI powered video confrencing app
 ## Tech Stack
 
 - NextJs + Typescript as a full stack framework
-- Stream SDK for video support
+- [Stream SDK](https://getstream.io/) for video support
 - Clerk for authentication
 - Shadcn and Tailwind for UI and styling
-- Gemini API for AI Chat
+- Gemini API
 
-## Getting Started on Loacl setup
+## Local Setup
 
-First, clone the repository
+Clone the repository
 
 ```bash
-git clone 'url'
+git clone https://github.com/saran1522/ConnectifAI.git
 ```
 
-Then, install the dependencies:
+Install the dependencies:
 
 ```bash
 npm install
@@ -28,7 +28,7 @@ yarn install
 pnpm install
 ```
 
-Then, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -38,4 +38,4 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
