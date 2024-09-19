@@ -36,15 +36,20 @@ function PersonalRoomo() {
   const meetingLink = `http://${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}`;
 
   return (
-    <section className="flex flex-col size-full gap-4">
+    <section className="flex flex-col size-full gap-3.5">
       <h1 className="mx-auto lg:mx-0 font-semibold text-4xl text-[#ffffff37]">
         Personal Room
       </h1>
-      <img
-        src={user?.imageUrl}
-        alt=""
-        className="mx-auto lg:mx-0 rounded-full h-32 w-32"
-      />
+      <div className="w-fit rounded-full border-4 border-[#6afffd] overflow-hidden">
+        <Image
+          src={user?.imageUrl}
+          alt="user image"
+          height={200}
+          width={160}
+          className="mx-auto lg:mx-0 overflow-hidden"
+        />
+      </div>
+
       <div>
         <PersonalItem title="Meeting ID " description={meetingId!} />
         <PersonalItem title="Invite Link " description={meetingLink} />

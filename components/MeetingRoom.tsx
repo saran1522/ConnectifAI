@@ -74,9 +74,8 @@ function MeetingRoom() {
           </div>
           <DropdownMenuContent className="border border-dark-1 bg-dark-1">
             {["Grid", "Speaker-Right", "Speaker-Left"].map((item, index) => (
-              <div>
+              <div key={index}>
                 <DropdownMenuItem
-                  key={index}
                   onClick={() =>
                     setLayout(item.toLocaleLowerCase() as CallLayoutType)
                   }
