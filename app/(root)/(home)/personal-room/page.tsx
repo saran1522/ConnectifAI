@@ -42,7 +42,7 @@ function PersonalRoomo() {
       </h1>
       <div className="w-fit rounded-full border-4 border-[#6afffd] overflow-hidden">
         <Image
-          src={user?.imageUrl}
+          src={user?.imageUrl!}
           alt="user image"
           height={200}
           width={160}
