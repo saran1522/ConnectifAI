@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 if (!apiKey) throw new Error("Gemini API key is not valid");
 const genAI = new GoogleGenerativeAI(apiKey);
-const conversationHistory = [];
+let conversationHistory: any[] = [];
 
 export async function runConversation(query: string) {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
