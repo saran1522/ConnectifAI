@@ -56,17 +56,21 @@ function AiChat() {
               </div>
             ))}
         </div>
-        <div className="flex justify-between items-center absolute overflow-hidden bottom-4 w-[90%] rounded-xl bg-dark-3 ">
+        <div className="flex items-center absolute bottom-4 rounded-xl bg-dark-3 ">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ask something..."
-            className="border-r text-gray-300 border-r-gray-500 flex-1 bg-transparent p-3 focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-0 "
+            className="bg-transparent py-3 px-1"
+            // className="border-r text-gray-300 border-r-gray-500 bg-transparent p-3 focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-0 "
           />
-          <button className="p-2 w-fit cursor-pointer" onClick={handleQuery}>
-            <ArrowRight size={25} className="w-fit text-gray-400" />
-          </button>
+          {/* <button
+            className="p-2 min-w-[150px] cursor-pointer"
+            onClick={handleQuery}
+          > */}
+          <ArrowRight size={45} className="" />
+          {/* </button> */}
         </div>
       </SheetContent>
     </Sheet>

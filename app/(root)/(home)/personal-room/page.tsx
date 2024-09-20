@@ -33,14 +33,12 @@ function PersonalRoomo() {
     router.push(`/meeting/${meetingId}`);
   };
 
-  const meetingLink = `http://${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}`;
+  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}`;
 
   return (
     <section className="flex flex-col size-full gap-3.5">
-      <h1 className="mx-auto lg:mx-0 font-semibold text-4xl text-[#ffffff37]">
-        Personal Room
-      </h1>
-      <div className="w-fit rounded-full border-4 border-[#6afffd] overflow-hidden">
+      <h1 className="font-semibold text-4xl">Personal Room</h1>
+      <div className="w-fit rounded-full border-4 border-purple-1 overflow-hidden">
         <Image
           src={user?.imageUrl!}
           alt="user image"
