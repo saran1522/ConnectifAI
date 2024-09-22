@@ -1,13 +1,26 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function HeroSection() {
   const date = new Date();
-  const time = date.toLocaleString("en-IN", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const [time, setTime] = useState(
+    date.toLocaleString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+  );
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(
+        new Date().toLocaleString("en-IN", {
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      );
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   const day = Intl.DateTimeFormat("en-IN", { dateStyle: "full" }).format(date);
   const { user } = useUser();
 
