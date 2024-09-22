@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import Markdown from "markdown-to-jsx";
 import {
   Sheet,
@@ -13,7 +13,8 @@ import { Content } from "@google/generative-ai";
 function AiChat() {
   const [query, setQuery] = useState("");
   const [conversationHistory, setConversationHistory] = useState<Content[]>([]);
-  async function handleQuery() {
+  async function handleQuery(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     try {
       const res = await runConversation(query);
       setConversationHistory(res);
@@ -56,7 +57,10 @@ function AiChat() {
               </div>
             ))}
         </div>
-        <div className="flex justify-between w-[90%] items-center absolute bottom-4 right-4 rounded-xl bg-dark-3">
+        <form
+          className="flex justify-between w-[90%] items-center absolute bottom-4 right-4 rounded-xl bg-dark-3"
+          onSubmit={handleQuery}
+        >
           <input
             type="text"
             value={query}
@@ -66,12 +70,12 @@ function AiChat() {
           />
           <button
             className={`p-2 ${query === "" && "opacity-10"} text-gray-200`}
-            onClick={handleQuery}
+            // onClick={handleQuery}
             disabled={query === ""}
           >
             <LucideChevronsRight size={25} />
           </button>
-        </div>
+        </form>
       </SheetContent>
     </Sheet>
   );
