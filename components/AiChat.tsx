@@ -6,7 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ArrowRight, BotIcon, Sparkle, User } from "lucide-react";
+import { BotIcon, LucideChevronsRight, Sparkle, User } from "lucide-react";
 import { runConversation } from "@/actions/gemini.action";
 import { Content } from "@google/generative-ai";
 
@@ -56,21 +56,21 @@ function AiChat() {
               </div>
             ))}
         </div>
-        <div className="flex items-center absolute bottom-4 rounded-xl bg-dark-3 ">
+        <div className="flex justify-between w-[90%] items-center absolute bottom-4 right-4 rounded-xl bg-dark-3">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ask something..."
-            className="bg-transparent py-3 px-1"
-            // className="border-r text-gray-300 border-r-gray-500 bg-transparent p-3 focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-0 "
+            className="bg-transparent w-5/6 px-3 lg:px-3 lg:flex-1 py-3 border-r border-r-gray-500 focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-0"
           />
-          {/* <button
-            className="p-2 min-w-[150px] cursor-pointer"
+          <button
+            className={`p-2 ${query === "" && "opacity-10"} text-gray-200`}
             onClick={handleQuery}
-          > */}
-          <ArrowRight size={45} className="" />
-          {/* </button> */}
+            disabled={query === ""}
+          >
+            <LucideChevronsRight size={25} />
+          </button>
         </div>
       </SheetContent>
     </Sheet>
