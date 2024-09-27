@@ -4,7 +4,9 @@ import React from "react";
 function SignUpPage() {
   return (
     <main className="flex-center h-screen w-full">
-      <SignUp />
+      <div className="scale-75">
+        <SignUp />
+      </div>
     </main>
   );
 }

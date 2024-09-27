@@ -4,7 +4,9 @@ import React from "react";
 function SignInPage() {
   return (
     <main className="flex-center h-screen w-full">
-      <SignIn />
+      <div className="scale-75">
+        <SignIn />
+      </div>
     </main>
   );
 }

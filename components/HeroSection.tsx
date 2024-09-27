@@ -20,12 +20,12 @@ function HeroSection() {
       );
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [time]);
   const day = Intl.DateTimeFormat("en-IN", { dateStyle: "full" }).format(date);
   const { user } = useUser();
 
   return (
-    <div className="text-[#ffffffd2] flex flex-col h-[180px] rounded-lg bg-cover w-full">
+    <div className="text-[#ffffffd2] max-md:mb-10 flex flex-col h-[180px] rounded-lg bg-cover w-full">
       <div className="">
         <h1 className="text-3xl py-3 lg:text-5xl font-semibold capitalize">
           Welcome, {user?.fullName}

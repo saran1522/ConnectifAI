@@ -6,7 +6,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 function Navbar() {
   return (
-    <nav className=" flex-between fixed z-50 px-6 py-4 w-full bg-dark-2 lg:px-6">
+    <nav className=" flex-between absolute z-50 px-6 py-4 w-full bg-transparent lg:px-6">
       <Link href="/" className="flex gap-2 items-center">
         <Image
           src="/icons/logo3.svg"
@@ -24,7 +24,9 @@ function Navbar() {
           <UserButton />
         </SignedIn>
         <div className="md:hidden">
-          <MobileNav />
+          <SignedIn>
+            <MobileNav />
+          </SignedIn>
         </div>
       </div>
     </nav>
