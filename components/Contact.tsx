@@ -4,9 +4,9 @@ import { FaGithub, FaEnvelope } from "react-icons/fa6";
 
 function Contact() {
   return (
-    <div className="pt-28 text-slate-400 ">
-      <div className="flex gap-10 justify-center max-md:gap-5 bg-gray-900 w-full p-4">
-        <p>© 2024 ConnectifAI</p>
+    <div className="pt-28 text-slate-500 ">
+      <div className="flex gap-10 justify-center max-md:gap-4 bg-gray-900 flex-wrap w-full p-4">
+        <p>© ConnectifAI</p>
         <FaGithub
           size={24}
           onClick={() =>
@@ -24,6 +24,7 @@ function Contact() {
           }
           className="cursor-pointer"
         />
+        <p className="">saransinha205@gmail.com</p>
       </div>
     </div>
   );

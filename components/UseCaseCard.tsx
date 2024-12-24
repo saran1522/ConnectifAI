@@ -16,20 +16,14 @@ function UseCaseCard({
   return (
     <div
       className={cn(
-        `p-4 flex lg:w-[80%] max-md:gap-5 max-md:flex-col justify-between items-center`,
+        `p-4 flex lg:w-[80%] max-md:gap-5 max-md:flex-col gap-5 items-center`,
         className
       )}
     >
-      <Image
-        src={src}
-        alt="hero"
-        width={400}
-        height={200}
-        className="border-8 rounded-xl border-gray-400"
-      />
+      <Image src={src} alt="hero" width={500} height={200} className="updown" />
       <div>
-        <h3 className="text-3xl font-bold">
-          <span className=" text-[#07fbff]">{title} </span>
+        <h3 className="text-3xl">
+          <span className=" text-indigo-600">{title} </span>
         </h3>
         <p className="text-xl w-72 leading-normal">{description}</p>
       </div>

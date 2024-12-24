@@ -20,7 +20,7 @@ function MeetingTypeCard({
   return (
     <div
       className={cn(
-        "p-4 flex flex-col gap-6 lg:gap-2 justify-between w-full rounded-xl xl:max-w-[350px] cursor-pointer ",
+        " p-4 flex flex-col gap-6 lg:gap-14 justify-between w-full rounded-xl xl:max-w-[350px] cursor-pointer ",
         className
       )}
       onClick={onClick}

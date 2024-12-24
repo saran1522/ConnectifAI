@@ -8,7 +8,7 @@ function StartBtn() {
   return (
     <Button
       onClick={() => router.push("/home")}
-      className=" border border-purple-1 rounded-lg p-4 hover:bg-aqua-1 hover:bg-clip-border transition-all ease-linear hover:text-gray-800 hover:border-transparent"
+      className=" border border-indigo-600 rounded-xl p-5 py-6 hover:bg-indigo-600 hover:bg-clip-border transition-all ease-linear hover:border-transparent text-lg hover:text-white"
     >
       Get Started →
     </Button>

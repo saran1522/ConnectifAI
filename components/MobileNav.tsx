@@ -26,7 +26,7 @@ function MobileNav() {
         <SheetContent side="left" className="bg-dark-2 border-none">
           <Link href="/" className="flex gap-5 items-center">
             <Image
-              src="/icons/logo3.svg"
+              src="/icons/logo3.png"
               height={35}
               width={35}
               alt="join meeting"
