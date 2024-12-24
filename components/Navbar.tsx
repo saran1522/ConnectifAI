@@ -9,13 +9,13 @@ function Navbar() {
     <nav className=" flex-between absolute z-50 px-6 py-4 w-full bg-transparent lg:px-6">
       <Link href="/" className="flex gap-2 items-center">
         <Image
-          src="/icons/logo3.svg"
+          src="/icons/logo3.png"
           height={35}
           width={35}
           alt="join meeting"
           className="cursor-pointer"
         ></Image>
-        <p className="text-[#9bf2f5] text-2xl font-semibold max-sm:hidden">
+        <p className="text-blue-400 text-2xl font-semibold max-sm:hidden">
           ConnectifAI
         </p>
       </Link>

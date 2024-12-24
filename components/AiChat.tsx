@@ -17,7 +17,7 @@ function AiChat() {
     e.preventDefault();
     try {
       const res = await runConversation(query);
-      setConversationHistory(res);
+      setConversationHistory(res!);
       setQuery("");
     } catch (error) {
       console.log(error);

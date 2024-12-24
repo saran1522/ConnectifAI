@@ -7,19 +7,18 @@ import {
   TbPlayerTrackPrevFilled,
   TbPlayerTrackNextFilled,
 } from "react-icons/tb";
+import Heading from "./Heading";
 
 function Featured() {
   return (
-    <div className=" pt-10 pb-10 w-full">
-      <h3 className="text-center text-3xl mb-2 font-semibold">
-        Checkout{" "}
-        <span className="border-b-4 text-aqua-1 border-aqua-1">Features</span>
-      </h3>
-      <p className="text-center max-md:px-4">
-        Checkout our amazing features that will make your experience better than
-        ever
-      </p>
-      <div className="flex justify-evenly gap-20 flex-wrap w-full max-md:flex-col max-md:gap-10 mt-10">
+    <div className="w-full mt-20">
+      <Heading
+        text1="Checkout Amazing "
+        text2="Features"
+        description="Checkout our amazing features that will make your experience better than
+        ever"
+      />
+      <div className="grid grid-cols-3 gap-20 w-full max-md:grid-cols-1 max-md:gap-10 mt-20">
         <FeaturedCard
           icon={FaHeadphonesSimple}
           title="Audio and HD Video Calling"

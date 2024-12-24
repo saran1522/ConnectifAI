@@ -25,9 +25,9 @@ function HeroSection() {
   const { user } = useUser();
 
   return (
-    <div className="text-[#ffffffd2] max-md:mb-10 flex flex-col h-[180px] rounded-lg bg-cover w-full">
+    <div className="text-[#ffffffd2] max-md:mb-10 flex flex-col h-[200px] rounded-lg bg-cover w-full">
       <div className="">
-        <h1 className="text-3xl py-3 lg:text-5xl font-semibold capitalize">
+        <h1 className="text-3xl py-3 lg:text-6xl font-semibold capitalize">
           Welcome, {user?.fullName}
         </h1>
       </div>

@@ -46,7 +46,7 @@
   background: rgba(255, 255, 255, 0.105);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1)
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ==== clerk class override ===== */
@@ -140,4 +140,22 @@
   background: #4b5563;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.updown {
+  animation: animate 4s infinite ease;
+}
+
+@keyframes animate {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 20px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
 }
