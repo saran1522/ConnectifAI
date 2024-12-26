@@ -20,7 +20,8 @@ function Sidebar() {
             className={cn(
               "p-3 flex items-center justify-start gap-4 rounded-xl hover:bg-dark-2",
               {
-                "bg-purple-1 rounded-xl": isActive,
+                "bg-[linear-gradient(to_bottom_right,#0088ff,#2d00f7)] rounded-xl":
+                  isActive,
               }
             )}
           >

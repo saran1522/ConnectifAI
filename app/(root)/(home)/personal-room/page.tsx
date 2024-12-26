@@ -53,7 +53,10 @@ function PersonalRoomo() {
         <PersonalItem title="Invite Link " description={meetingLink} />
       </div>
       <div className="flex gap-2">
-        <Button className="bg-purple-1" onClick={createCall}>
+        <Button
+          className="bg-[linear-gradient(to_bottom_right,#0088ff,#2d00f7)]"
+          onClick={createCall}
+        >
           Start The Meeting
         </Button>
         <Button

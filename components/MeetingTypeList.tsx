@@ -73,28 +73,29 @@ function MeetingTypeList() {
         description="Start an instant meeting"
         image="/icons/add-meeting.svg"
         onClick={() => setMeetingType("isInstantMeeting")}
-        className="bg-orange-1"
+        // className="bg-orange-1"
+        className="bg-[linear-gradient(to_bottom_right,#fc8934,#fb5607)]"
       />
       <MeetingTypeCard
         title="Join Meeting"
         description="Join via meeting link"
         image="/icons/join-meeting.svg"
         onClick={() => setMeetingType("isJoiningMeeting")}
-        className="bg-[#1dd3b0]"
+        className="bg-[linear-gradient(to_bottom_right,#2ec4b6,#086788)]"
       />
       <MeetingTypeCard
         title="Schedule Meeting"
         description="Schedule a meeting for later"
         image="/icons/schedule.svg"
         onClick={() => setMeetingType("isScheduleMeeting")}
-        className="bg-blue-1"
+        className="bg-[linear-gradient(to_bottom_right,#8b5cf6,#444cf7)]"
       />
       <MeetingTypeCard
         title="View Recordings"
         description="View past meeting recordings"
         image="/icons/recordings.svg"
         onClick={() => router.push("/recordings")}
-        className="bg-[#ff312e]"
+        className="bg-[linear-gradient(to_bottom_right,#dd2d4a,#fe003b)]"
       />
       {!callDetails ? (
         <MeetingModal

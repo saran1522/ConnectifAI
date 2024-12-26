@@ -42,7 +42,10 @@ function MeetingCard({
       <div className="flex items-center w-full gap-1 justify-between">
         {!isPrevious && (
           <div className="flex gap-2 basis-1/2">
-            <Button className="bg-purple-1" onClick={handleClick}>
+            <Button
+              className="bg-[linear-gradient(to_bottom_right,#0088ff,#2d00f7)]"
+              onClick={handleClick}
+            >
               {buttonText}
             </Button>
             <Button
