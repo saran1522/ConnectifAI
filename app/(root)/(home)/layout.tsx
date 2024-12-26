@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "ConnectifAI",
   description: "An AI powered video conferencing platform",
   icons: {
-    icon: "/icons/logo3.svg",
+    icon: "/icons/icon.png",
   },
 };
 
