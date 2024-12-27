@@ -1,6 +1,7 @@
 import CallToAction from "@/components/CallToAction";
 import Contact from "@/components/Contact";
 import Featured from "@/components/Featured";
+import ProductHunt from "@/components/ProductHunt";
 import StartBtn from "@/components/StartBtn";
 import TrustNumbers from "@/components/TrustNumbers";
 import UseCase from "@/components/UseCase";
@@ -19,6 +20,7 @@ function Home() {
               Effortless Video Calls, Intelligent AI Chatbot.
             </p>
             <StartBtn />
+            <ProductHunt />
           </div>
           <div className="w-full lg:translate-y-[-100px] flex md:justify-around lg:items-center max-md:flex-col max-md:gap-0 ">
             <Image
